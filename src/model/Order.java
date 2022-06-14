@@ -79,8 +79,9 @@ public class Order extends Product implements Serializable {
         return "Order => " +
                 " STT " + count +"   " +
                 " Tên khách hàng : " + customer + "  " +
-                " Số lượng : " + amount +
-                " |Sản phẩm thanh toán:" + product  +"Tổng tiền " + total() + "\n"
+                " Số lượng : " + amount + "\n" +
+                 product + "\t" +"Tổng tiền " + total() +"\n"
+               + "________________________________________________________________________________________________________________________-" + "\n"
                 ;
     }
 }

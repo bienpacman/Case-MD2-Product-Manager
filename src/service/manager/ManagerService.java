@@ -14,7 +14,6 @@ public class ManagerService implements IManagerService {
     @Override
     public List<Manager> findAll() {
         new ConfigReadAndWriteFIle<Manager>().writeFile(PathManager, managerList);
-
         return managerList;
     }
 

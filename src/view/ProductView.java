@@ -6,14 +6,13 @@ import model.Category;
 import model.Product;
 import service.product.ProductService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class ProductView {
     Scanner scanner = new Scanner(System.in);
-    ProductController productController = new ProductController();
     CategoryController categoryController = new CategoryController();
+    ProductController productController = new ProductController();
     List<Product> productList = ProductService.productList;
 
 
@@ -37,12 +36,7 @@ public class ProductView {
             int idCategory = Integer.parseInt(scanner.nextLine());
 
             Category category = new CategoryController().findById(idCategory);
-            Product product = new Product(id, name, origin, quantity, price, category) {
-                @Override
-                public void setQuantity(Product quantity) {
-
-                }
-            };
+            Product product = new Product(id, name, origin, quantity, price, category) ;
             productController.creatProduct(product);
             System.out.println("Nhập bất kì phím nào để tiếp tục tạo sản phẩm hoặc Quit để về MENU :");
             String backMenu = scanner.nextLine();
@@ -89,10 +83,6 @@ public class ProductView {
             String nameCategory = scanner.nextLine();
             Category category = new Category(nameCategory);
             Product product = new Product(id, name, origin, quantity, price, category) {
-                @Override
-                public void setQuantity(Product quantity) {
-
-                }
             };
             productController.editById(product);
             System.out.println(productController.showListProduct());
@@ -117,7 +107,7 @@ public class ProductView {
         while (true) {
             System.out.println("1. Tìm giá từ 0 ~ 5000");
             System.out.println("2. Tìm giá từ 5000 ~ 20000");
-            System.out.println("3. Tìm giá từ 20000 ~ 100000");
+            System.out.println("3. Tìm giá từ 20000 ~ 1000000");
             System.out.println("Nhập một lựa chọn :");
             int choice = scanner.nextInt();
             switch (choice) {

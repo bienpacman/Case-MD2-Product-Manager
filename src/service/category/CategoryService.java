@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CategoryService implements ICategoryService {
-    Scanner scanner = new Scanner(System.in);
 
     public static String PathCategory = ConfigReadAndWriteFIle.Path + "category.txt";
 

@@ -26,8 +26,7 @@ public class Main {
         boolean checkManager = roleList.get(0).getName() == (RoleName.MANAGER);
         boolean checkUser = roleList.get(0).getName() == (RoleName.USER);
         CategoryView categoryView = new CategoryView();
-        ProductView productView = new ProductView();
-        ;
+
         if (managerList.size() != 0) {
             checklogin = true;
         } else if (userList.size() != 0) {
@@ -97,16 +96,16 @@ public class Main {
                             categoryView.editById();
                             break;
                         case 6:
-                            productView.showProduct();
+                            new ProductView().showProduct();
                             break;
                         case 7:
-                            productView.addProduct();
+                            new ProductView().addProduct();
                             break;
                         case 8:
-                            productView.deleteProduct();
+                            new ProductView().deleteProduct();
                             break;
                         case 9:
-                            productView.editProduct();
+                            new ProductView().editProduct();
                             break;
                         case 10:
                             new ProfileView();
@@ -114,21 +113,19 @@ public class Main {
                         case 11:
                             new RegisterAndLoginView();
                             break;
-//                        case 12:
-//                            categoryView.fromListCategory();
-//                            break;
+
                     }
 
                 } else if (checkUser) {
                     switch (choice) {
                         case 1:
-                            productView.findProductByPrice();
+                            new ProductView().findProductByPrice();
                             break;
                         case 2:
-                            productView.findProductByName();
+                            new ProductView().findProductByName();
                             break;
                         case 3:
-                            productView.sortByPrice();
+                            new ProductView().sortByPrice();
                             break;
                         case 4:
                             new OrderView().createOrder();
@@ -137,7 +134,7 @@ public class Main {
                             new OrderView().bestProduct();
                             break;
                         case 6:
-                            productView.showProduct();
+                            new ProductView().showProduct();
                             break;
                         case 7:
                             new OrderView().showListOder();

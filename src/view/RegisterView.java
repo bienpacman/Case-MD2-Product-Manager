@@ -2,10 +2,8 @@ package view;
 
 import controller.UserController;
 import dto.SignUpDTO;
-import model.User;
 import service.role.RoleService;
 import service.user.UserService;
-
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;

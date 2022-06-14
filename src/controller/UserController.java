@@ -40,7 +40,6 @@ public class UserController {
                     break;
             }
         });
-     // User user = new User(id, signUpDTO.getName(), signUpDTO.getPassword(), signUpDTO.getPassword(), roleSet);
         User user = new User(id,signUpDTO.getName(),signUpDTO.getUsername(),signUpDTO.getPassword(),roleSet);
         userService.save(user);
         userService.findAll();

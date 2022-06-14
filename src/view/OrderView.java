@@ -3,11 +3,9 @@ package view;
 import controller.CategoryController;
 import controller.OrderController;
 import controller.ProductController;
-import model.Category;
 import model.Order;
 import model.Product;
 import service.order.OrderService;
-import service.product.ProductService;
 
 import java.util.List;
 import java.util.Scanner;

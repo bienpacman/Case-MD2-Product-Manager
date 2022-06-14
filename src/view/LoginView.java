@@ -22,7 +22,7 @@ public class LoginView {
             new ProfileView();
         }else {
             System.err.println("Đăng nhập thất bại! vui lòng kiểm tra tên người dùng hoặc mật khẩu! ⚠️  ");
-            new RegisterAndLoginView();
+          new RegisterAndLoginView();
         }
     }
 }

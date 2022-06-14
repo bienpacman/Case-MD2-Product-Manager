@@ -87,8 +87,7 @@ public  class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "Product |" +
-                "Id : " + id + "|" +
+        return "Id : " + id + "|" +
                 " Sản phẩm :" + name + "|" +
                 " Xuất xứ :" + origin + "|" +
                 " số lượng :" + quantity + "|" +
